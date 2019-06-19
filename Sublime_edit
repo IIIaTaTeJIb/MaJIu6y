@@ -1,0 +1,274 @@
+{// !!! В ЭТОМ КОДЕ НЕ ПОКАЗАНЫ ВСЕ ВОЗМОЖНЫЕ ФУНКИИ!!
+    "name": "Improws Color Scheme",
+    
+    "variablе": // Переменные
+	{
+		"green": "hsla(153, 80%, 40%, 1)",
+		"white": "rgb(242, 242, 242)",
+	},
+    "globals": // Глобальные настройки
+    {	
+    	// Каретка - полоса, которая указывает место вписывания
+
+    	// Выделенный текст
+    	"selection": "#4e4ea3",// Цвет фона выделенного текста
+    	"caret": "white",// Выделение цветом знак выделение (полоса которая показывает где будет писать)
+    	"selection_foreground": "#33CCCC",// Цвет, который будет переопределять цвет текста на основе области выделения
+    	"selection_border":"#33cccc",// Цвет границы выделения
+    	"selection_border_width": "1.5",// Ширина границы выделения от 0 до 4.
+    	"inactive_seleion": "#00ffff",// Цвет фона выделения в представлении, которое в данный момент не сфокусировано
+    	"selection_corner_style": "square",// Стиль углов для выбора. Варианты включают: круглый (по умолчанию)(round), вырезать(cut) или квадрат(square).
+    	"selection_corner_radius": "",// Радиус, который используется, когда selection_corner_style является круглым или вырезанным.
+    	
+    	// Находить (через find)
+    	"highlight": "#33CCCC",// Цвет границы для «других» совпадает, если на панели «Поиск» выбран параметр «Выделить совпадения». 
+    	//Также используется для выделения совпадений в результатах поиска в файлах.
+    	"find_highlight": "#33CCCC",// Цвет фона текста, соответствующего панели «Найти»
+    	"find_highlight_foreground": "#333366",// Цвет, который будет переопределять цвет текста на основе области, соответствующий панели «Найти».
+    	
+    	// diff - линии, те что справа.
+    	"line_diff_width": "5",// Ширина различий между 1 и 8
+    	"line_diff_added": "green",// Полоса под новой линией
+    	"line_diff_modified": "#33CCCC",// Цвет маркеров diff для измененных линий
+    	"line_diff_deleted": "#af2323",// Цвет маркеров различий для удаленных линий
+    	
+    	// желоб
+    	"gutter": "#333669",// Цвет фона желоба
+    	"gutter_foreground": "#33CCCC",// Цвет номеров строк в желобе
+    	
+    	// Фон, выделение и т.д.
+    	"accent": "#333366",// Цвет, доступный для использования темой.
+    	"minimap_border": "#000000", // Цвет границы, нарисованной вокруг области просмотра миникарты (Ctrl + b)
+    	"fold_marker": "#666666",// Цвет, используемый для маркера, который указывает, что содержимое было свернуто.
+    	"misspelling": "#ff0000", // Цвет, используемый для подчеркнутого подчеркивания, нарисованного словами с ошибками.
+    	"line_highlight": "#3f3f82",// Цвет выделяющей столпчика номер. Используется только когда включена опция highlight_line.
+    	"invisibles": "navy",// Цвет для пробела (когда выделяешь код)
+        "background": "#333366", // Цвет главного фона
+        "foreground": "#EEEEEE", // Цвет цифр что справа, и этих "кавычек"
+        "block_caret": "3e3e6b",// Цвет каретки при использовании блочной каретки   
+
+        // Гайды (отступы)
+        "guide": "#ffffff",// Цвет, используемый для рисования направляющих.(линии, что выделяют отступ)
+        //Используется только в том случае, если в параметре indent_guide_options присутствует параметр «draw_normal»
+        "active_guide": "#61619b",// Цвет, используемый для рисования направляющих для уровней отступа, содержащих каретку. 
+        //Используется только в том случае, если в параметре indent_guide_options присутствует параметр «draw_active».
+        "stack_guide": "#61619b",// Цвет, используемый для рисования направляющих отступов для родительских уровней отступа уровня отступа, содержащего каретку.
+        // Используется только в том случае, если в параметре indent_guide_options присутствует параметр «draw_active».
+
+      	// Скобки
+      	"brackets_options": "bold",// Как скобки подсвечиваются, когда каретка рядом с одной. Принимает разделенный пробелами список из следующего:underline, stippled_underline, squiggly_underline, foreground, bold, italic
+      	"brackets_foreground": "#00ff15",// Цвет, используемый при рисовании стиля, указанного brackets_options.
+      	"bracket_contents_options": "italic",// Как скобки подсвечиваются, когда каретка расположена между парой скобок. Принимает разделенный пробелами список из
+      	// следующего: underline, stippled_underline, squiggly_underline, foreground
+      	"bracket_contents_foreground": "#a9a9f9",// Цвет, используемый при рисовании стиля, указанного в brackets_contents_options.
+
+      	// Тэги
+      	"tags_options": "foreground", // Как метки подсвечиваются, когда каретка находится внутри одного.
+      	//Принимает разделенный пробелами список из следующего: underline, stippled_underline, squiggly_underline, foreground
+      	"tags_foreground": "lime", // Цвет, используемый при рисовании стиля, указанного в tags_options.
+
+      	// Тень (Для окна что справа)
+      	"shadow": "black",// Цвет тени, используемый для отображения возможности горизонтальной прокрутки текстовой области
+      	"shadow_width": "10",// Ширина тени в независимых от устройства пикселях
+    },
+    "rules": // Остальное
+    [	// Всё что может понадобится, есть здесь: https://www.sublimetext.com/docs/3/scope_naming.html,
+    	// https://www.sublimetext.com/docs/3/color_schemes.html#scope_rules
+
+        {   // Название роботает по схеме переменных
+            "name": "Comment", // Коментарий
+            "scope": "comment",
+            "font_style": "0",// 0 или более жирного шрифта(bold), курсива(italic), разделенных пробелами
+            "foreground": "#5c8e8e"// Цвет текста
+// По поводу "name": на сайте https://www.sublimetext.com/docs/3/scope_naming.html#string
+// есть заголовки, эти заголовки и есть потенциальные "name'ы".
+// "scope": скоуп - это грубо говоря подзаголовок, как например в модулях извлекаем
+// определённую функцию, введя только основное, первое значение, следующие коды будут
+// использоватся на все подфукции
+        },
+        {
+           	"scope": "punctuation.definition.comment", // Цвет коментария
+           	"foreground": "aqua"
+        },
+        {   // Числовые литералы, включая целые числа, числа с плавающей запятой и т.д.
+            "name": "Constant",
+            "scope": "constant.numeric",
+            "foreground": "#b200ff",
+            "font_style": "italic",
+        },
+        {
+        	"scope": "constant.language",
+        	"foreground": "aqua"
+        },
+		{
+			"scope": "source",
+			"foreground": "white"
+		},
+		{	// Тут долго объяснять, вобщем вот: https://www.sublimetext.com/docs/3/scope_naming.html#constant
+		    "scope": "constant.numeric, entity.name.class",
+		    "foreground": "#33CCCC",
+		    "font_style": "italic",
+				
+		    "scope": "constant.character.escape",
+		    "foreground": "orange",
+		    "font_style": "italic",
+
+		    "scope": "constant.other",
+		    "foreground": "lightgreen",
+		    "font_style": "italic",
+
+		    "scope": "constant.other.placeholder, entity.name.struct",
+		    "foreground": "white",
+		    "font_style": "italic",
+
+		    "scope": "constant.numeric.float",
+		    "foreground": "lightblue"
+		},       
+		{	// Тут тоже, поэтому: https://www.sublimetext.com/docs/3/scope_naming.html#entity
+			"name": "Entity",
+			"scope": "entity",
+			"foreground": "lime"
+		},
+		{
+			"scope": "entity.other.inherited-class",
+			"foreground": "aqua"
+		},
+		{
+			"scope": "entity.name.function.constructor, entity.name.function.destructor",
+			"foreground": "aqua"
+		},
+		{
+			"scope": "entity.name.function.",
+			"foreground": "#00ff00"
+		},
+		{
+			"scope": "entity.name.namespace, entity.name.constant",
+			"foreground": "aqua",
+			"font_style": "italic"
+		},
+		{
+			"scope": "entity.name.tag, entity.name.label, entity.name.section",
+			"foreground": "red"
+		},
+		{  // Выделение текста, при ошибке 
+			"name": "Invalid",
+			"scope": "invalid",
+			"background": "#a51818",
+			"foreground": "#ff0000"
+		},
+		{ // Тут тоже много текста: https://www.sublimetext.com/docs/3/scope_naming.html#keyword
+			"name": "Keyword",
+			"scope": "keyword",
+			"foreground": "red",
+		},	
+		{	// Области разметки используются для контента, а не для кода. Это включает в себя такие синтаксисы, как Markdown и Textile.
+			// Но, в документации всё-равно больше контента
+			"name": "Markup",
+			"scope": "markup",
+			"foreground": "lightblue"
+		},
+		{	// Метаобласти используются для охвата больших разделов кода или разметки, обычно содержащих несколько более специфических областей. Они не предназначены для стилизации под цветовую схему, но используются настройками и плагинами.
+			// Ну тут слишком много контента: https://www.sublimetext.com/docs/3/scope_naming.html#meta
+			"name": "Meta",
+			"scope": "meta.",
+			"foreground": ""
+		},
+		{
+			"scope": "meta.function, meta.function.parameters, meta.function.return-type, meta.namespace, meta.class,",
+			"foreground": "white"
+		},
+		{
+
+		},
+		{
+			"scope": "meta.group, punctuation.section.group.begin, punctuation.section.group.end",
+			"foreground": "aqua"
+		},
+		{
+			"scope": "meta.function-call", // url
+			"foreground": "#e1e6e2"
+		},
+		{
+			"scope": "meta.tag, meta.paragraph",
+			"foreground": "aqua"
+		},	
+		{	// Следующие области являются областями пунктуации, которые не встроены в другие области. Например, строка. раздел содержит документацию по областям для пунктуации строки.
+			// ...  https://www.sublimetext.com/docs/3/scope_naming.html#punctuation
+			"name": "punctuation",
+			"scope": "punctuation.separator",
+			"foreground": "aqua"
+		},
+		{
+			"scope": "punctuation.terminator",
+			"foreground": "white"
+		},
+		{
+			"scope": "punctuation.separator.continuation",
+			"foreground": "blue"
+		},
+		{
+			"scope": "punctuation.accessor",
+			"foreground": "#6ee0ff"
+		},
+		// Там ещё sourse есть, но мне он не понадобился, да и так там своя схема.
+
+		{	// Типы должны использовать следующую область. Примеры включают int, bool и char.
+			"name": "Storage",
+			"scope": "storage",
+			"foreground": "green"
+
+		},
+		{
+			"scope": "storage.type",
+			"foreground": "aqua"
+		},
+		{
+			"name": "Text",
+			"scope": "text",
+			"foreground": "white"
+		},
+        {	// https://www.sublimetext.com/docs/3/scope_naming.html#text
+            "name": "String", 
+            "scope": "string",
+            "selection_foreground": "aqua",// Цвет текста при выделении.
+            "font_style": "0",
+            "foreground": "orange",
+        },
+        {
+        	"scope": "punctuation.definition.string.begin, punctuation.definition.string.end",
+        	"font_style": "italic"
+        },
+        {
+
+        	"scope": "string.quoted.single",
+        	"foreground": "yellow",
+
+        	"scope": "string.quoted.triple",
+        	"foreground": "coral"
+        },
+        {	// https://www.sublimetext.com/docs/3/scope_naming.html#variable
+        	"name": "Support",
+        	"scope": "support.constant",
+        	"foreground": "aqua"
+        },
+        {
+        	"name": "Text",
+        	"scope": "text",
+        	"foreground": "ghostwhite"
+        },
+		{
+			"name": "Variable",
+			"scope": "variable",
+			"foreground": "aqua"
+		},
+		{
+			"scope": "variable.other.constant, variable.language, variable.parameter, variable.other.member",
+			"foreground": "orange"
+		},
+		{
+			"scope": "punctuation.definition.annotation",
+			"foreground": "aqua"
+		},
+
+	]
+}
